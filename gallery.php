@@ -6,22 +6,26 @@ if(isset($_GET["gallery"]))
 $gallery_photos = glob($photo_dir . "*.jpg");
 $gallery_videos = glob($photo_dir . "*.mp4");
 
-$stats = fopen("./photos/".$_GET["gallery"]."/stats.ini","rw");
-$stats_array = array(0);
-while ($line = fgets($stats)) {
-  $stats_array[$line] ++;
+$stats = NULL;
+if(isset($_GET["gallery"])){
+    $stats = fopen("./photos/".$_GET["gallery"]."/stats.ini","rw");
+    $stats_array = array(0);
+    while ($line = fgets($stats)) {
+      $stats_array[$line] ++;
+    }
+    fclose($stats);
 }
-fclose($stats)
-
+else
+    echo "Error 404";
 ?>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    <title><?php if (isset($_GET["gallery"])) echo str_replace("_", " ", $_GET["gallery"]); else echo "Error 404"; ?></title>
     
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="description" content="$_GET["gallery"]" />
     <meta name="author" content="Bartek Szopka" />
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
