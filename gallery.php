@@ -98,7 +98,7 @@ Shadowbox.init({
                     echo 'document.write("<a href=\"'.$image.'\" rel=\"shadowbox\"> <img src=\"'.$image.'\" alt=\"Photo "+image_number+"\" /> </a>")'."\n";
                 //echo 'dcoument.write("</a>")'."\n";
             echo "</script>";
-                    echo '<div class="description"';
+                    echo '<div class="description">';
                         echo '<p class = "artist">';
                             echo 'Darren Divecha';
                         echo '</p>';
@@ -115,6 +115,9 @@ Shadowbox.init({
                                 echo "<a href=\"temp\">0 Likes</a>";
                         echo '</p>';
                     echo '</div>';
+                    echo '<div class="donate">';
+                        echo '<a class="coinbase-button" data-code="3ab21e758befdae1a05387a8f2c1a9c4" data-button-style="custom_small" href="https://coinbase.com/checkouts/3ab21e758befdae1a05387a8f2c1a9c4">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>';
+        echo "</div>";
             echo "<script>";
                 echo 'document.write("</div>")'."\n";
                 echo "slide_pos += image_shift + 900;\n";
