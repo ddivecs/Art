@@ -1,77 +1,71 @@
 <!doctype html>
-<?php
-$test = "boobies"
-echo $test
-?>
 
-<html lang="en">
+
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
-    
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-    <meta name="author" content="Bartek Szopka" />
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+        <title>Gallery Extravaganza</title>
+<link href="css/css_main.css" type="text/css" rel="stylesheet">
+       
 
-    <!--
-        
-        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
-        presentation to work.
-        
-        This style below contains styles only for demo presentation. Browse it to see how impress.js
-        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
-        you to use them directly in your presentation.
-        
-        Be creative, build your own. We don't really want all impress.js presentations to look the same,
-        do we?
-        
-        When creating your own presentation get rid of this file. Start from scratch, it's fun!
-        
-    -->
-    <!--<link href="css/impress-demo.css" rel="stylesheet" />-->
-    
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
 </head>
 
-<body class="impress-not-supported">
 
-<!--
-    For example this fallback message is only visible when there is `impress-not-supported` class on body.
--->
-<div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+<body>
+        <div id="top"><h1>Gallery Extravaganza</h1>
+
+                <h3>
+                        <ul>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="submit.html">Submit</a></li>
+                                 <li><a href="donate.html">Donate</a></li>
+
+                        </ul>
+                </h3>
+        </div>
+
+<div id = "box">
+        <div id="grid">
+
+
+                <div class="gallery column1">
+
+                        <a href="gallery.php?gallery=hack_duke"><img src="photos/hack_duke/_DSC0654.jpg" height="300" width = "300" /></a>
+
+                        
+
+                </div>
+
+
+                <div class="gallery column2">
+                        <a href="gallery.php?gallery=ddivecha_portfolio"><img src="photos\ddivecha_portfolio\1.jpg" height="300" width = "300" /></a>
+                </div>
+
+
+                <div class="gallery column3">
+                        <img src="http://www.taylormarsh.com/wp-content/uploads/2013/08/batman-logo.jpg" height="300" width = "300" />
+                </div>
+                <div class="gallery column1">
+                       <img src="http://www.taylormarsh.com/wp-content/uploads/2013/08/batman-logo.jpg" height="300" width = "300" />
+                </div>
+                <div class="gallery column2">
+                        <img src="http://www.taylormarsh.com/wp-content/uploads/2013/08/batman-logo.jpg" height="300" width = "300" />
+                </div>
+                <div class="gallery column3">
+                        <img src="http://www.taylormarsh.com/wp-content/uploads/2013/08/batman-logo.jpg" height="300" width = "300" />
+                </div>
+
+        </div>
 </div>
 
 
-<div id="impress">
-
-    <div id="p1" class="step slide" data-x="100%" data-y="-1500">
-        <img src="./photos/1.jpg" alt="Photo 1" height="500"/>
-    </div>
-
-    <div id="p2" class="step slide" data-x="100%" data-y="-1500">
-        <img src="./photos/2.jpg" alt="Photo 2" height="500"/>
-    </div>
-
-    <div id="p3" class="step slide" data-x="100%" data-y="-1500">
-        <img src="./photos/3.jpg" alt="Photo 3" height="500"/>
-    </div>
-
-    <div class="hint">
-        <p>Use a spacebar or arrow keys to navigate</p>
-    </div>
-<script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
-</script>
-
-<script src="js/impress.js"></script>
-<script>impress().init();</script>
 </body>
+
+<footer>
+    <div id="bottom">&copy; 2013 TerpHackers</div>
+</footer>
+
 </html>
