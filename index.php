@@ -1,7 +1,10 @@
 <!doctype html>
 <?php
-$photo_dir = "./photos/";
+$photo_dir = "";
+if(isset($_GET["gallery"]))
+    $photo_dir = "./photos/".($_GET["gallery"])."/";
 $gallery_photos = glob($photo_dir . "*.jpg");
+$gallery_videos = glob($photo_dir . "*.mp4");
 ?>
 <html lang="en">
 <head>
@@ -31,8 +34,6 @@ $gallery_photos = glob($photo_dir . "*.jpg");
         
     -->
     <link href="css/art.css" rel="stylesheet" />
-<<<<<<< HEAD
-<<<<<<< HEAD
     <script type="text/javascript" src="js/jquery.js"></script>
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -46,26 +47,12 @@ $gallery_photos = glob($photo_dir . "*.jpg");
 Shadowbox.init({
     handleOversize: "drag",
     modal: true,
-    autoplayMovies: false,
     displayNav: false,
     overlayOpacity: 1,
     overlayColor: "#282828"
 });
 </script>
 
-=======
-=======
->>>>>>> 51220b070a43233c47d8b8419e06fb52a237e42c
-    
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-</head>
-
-<body class="impress-not-supported">
-<<<<<<< HEAD
->>>>>>> 51220b070a43233c47d8b8419e06fb52a237e42c
-=======
->>>>>>> 51220b070a43233c47d8b8419e06fb52a237e42c
 <script>
     slide_pos = 0;
     image_number = 1;
@@ -79,6 +66,16 @@ Shadowbox.init({
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
+<div id="top"><h1>Gallery Extravaganza</h1>
+    <ul>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="submit.html">Submit</a></li>
+        <li><a href="donate.html">Donate</a></li>
+    </ul>
+</div>
+
 
 <div id="impress">
     <?php
@@ -89,8 +86,6 @@ Shadowbox.init({
             //echo "$ratioed_width\n";
             echo "<script>";
                 echo 'document.write("<div id=\"p"+image_number+"\" class=\"step slide\" data-x= \"" + slide_pos + "\" data-y=\"0\">")'."\n";
-<<<<<<< HEAD
-<<<<<<< HEAD
                 //echo 'document.writer("")'."\n";
                     echo 'document.write("<a href=\"'.$image.'\" rel=\"shadowbox\"> <img src=\"'.$image.'\" alt=\"Photo "+image_number+"\" /> </a>")'."\n";
                 //echo 'dcoument.write("</a>")'."\n";
@@ -110,30 +105,23 @@ Shadowbox.init({
                 echo 'document.write("</div>")'."\n";
                 echo "slide_pos += image_shift + 900;\n";
                 echo "image_number++;\n";
-=======
-=======
->>>>>>> 51220b070a43233c47d8b8419e06fb52a237e42c
-                echo 'document.write("<img src=\".'.$image.'\" alt=\"Photo "+image_number+"\" />")'."\n";
-            echo "</script>";
-                    echo '<p class = "artist">';
-                    echo 'Darren Divecha';
-                    echo '</p>';
-                    echo '<p class = "title">';
-                    echo 'Cookies';
-                    echo '</p>';
-                    echo '<p class = "date">';
-                    echo 'today';
-                    echo '</p>';
-            echo "<script>";
-            echo 'document.write("</div>")'."\n";
-            echo "slide_pos += image_shift + 900;\n";
-            echo "image_number++;\n";
-<<<<<<< HEAD
->>>>>>> 51220b070a43233c47d8b8419e06fb52a237e42c
-=======
->>>>>>> 51220b070a43233c47d8b8419e06fb52a237e42c
             echo "</script>";
         }
+        
+        if(isset($_GET["gallery"]) && ($_GET["gallery"]) == "hack_duke"){
+            echo "<script>";
+                echo 'document.write("<div id=\"p"+image_number+"\" class=\"step slide\" data-x= \"" + slide_pos + "\" data-y=\"0\">")'."\n";
+                //echo 'document.writer("")'."\n";
+                echo 'document.write("<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/azgTUSWVj5M\" frameborder=\"0\" allowfullscreen></iframe>")'."\n";
+                //echo 'dcoument.write("</a>")'."\n";
+            echo "</script>";
+            echo "<script>";
+                echo 'document.write("</div>")'."\n";
+                echo "slide_pos += image_shift + 900;\n";
+                echo "image_number++;\n";
+            echo "</script>";
+        }
+
     ?>
     <div class="hint">
         <p>Use a spacebar or arrow keys to navigate</p>
