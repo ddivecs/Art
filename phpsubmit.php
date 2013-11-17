@@ -1,33 +1,40 @@
 <?php
-define("UPLOAD_DIR", "/uploads/");
- 
-if (!empty($_FILES[ "picture_vid_submit"])) {
-    $myFile = $_FILES[ "picture_vid_submit"];
- 
-    if ($myFile["error"] !== UPLOAD_ERR_OK) {
-        echo "<p>An error occurred.</p>";
-        exit;
+$allowedExts = array("gif", "jpeg", "jpg", "png");
+$temp = explode(".", $_FILES["file"]["name"]);
+$extension = end($temp);
+if ((($_FILES["file"]["type"] == "image/gif")
+|| ($_FILES["file"]["type"] == "image/jpeg")
+|| ($_FILES["file"]["type"] == "image/jpg")
+|| ($_FILES["file"]["type"] == "image/pjpeg")
+|| ($_FILES["file"]["type"] == "image/x-png")
+|| ($_FILES["file"]["type"] == "image/png"))
+&& in_array($extension, $allowedExts))
+  {
+  if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
     }
- 
-    // ensure a safe filename
-    //$name = preg_replace("/[^A-Z0-9._-]/i", "_", $myFile["name"]);
- 
-    // don't overwrite an existing file
-    $i = 0;
-    $parts = pathinfo($name);
-    while (file_exists(UPLOAD_DIR . $name)) {
-        $i++;
-        $name = $parts["filename"] . "-" . $i . "." . $parts["extension"];
+  else
+    {
+    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+    echo "Type: " . $_FILES["file"]["type"] . "<br>";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+
+    if (file_exists("photos/for_review/" . $_FILES["file"]["name"]))
+      {
+      echo $_FILES["file"]["name"] . " already exists. ";
+      }
+    else
+      {
+      move_uploaded_file($_FILES["file"]["tmp_name"],
+      "photos/for_review/" . $_FILES["file"]["name"]);
+      echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+      }
     }
- 
-    // preserve file from temporary directory
-    $success = move_uploaded_file($myFile["tmp_name"],
-        UPLOAD_DIR . $name);
-    if (!$success) { 
-        echo "<p>Unable to save file.</p>";
-        exit;
-    }
- exit();
-    // set proper permissions on the new file
-  //  chmod(UPLOAD_DIR . $name, 0644);
-}
+  }
+else
+  {
+  echo "Invalid file";
+  }
+?>

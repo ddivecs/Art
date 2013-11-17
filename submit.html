@@ -13,10 +13,10 @@
 </head>
 
 <body>
-  <div id="top"><h1 id="toph1">Gallery Extravaganza</h1>
+ <div id="top"><h1>Gallery Extravaganza</h1><br>
 
-                <h3 id="toph3">
-                        <ul id="toplist">
+                <h3>
+                        <ul>
                                 <li><a href="gallery.html">Gallery</a></li>
                                 <li><a href="about.html">About Us</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
@@ -32,13 +32,11 @@
         <div>
 
         	Please submit a picture or video to the site.
-
-        	<form action="phpsubmit.php" method="post">
-        		<p>Please upload here</p>
-        		<input type="file" name="picture_vid_submit" /><br/>
-        		<input type="submit" value="Upload"/>
-
-        	</form>
+            <form action="phpsubmit.php" method="post" enctype="multipart/form-data">
+            <label for="file">Filename:</label>
+            <input type="file" name="file" id="file"><br>
+            <input type="submit" name="submit" value="Submit">
+            </form>
 
 
 
