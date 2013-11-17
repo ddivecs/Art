@@ -39,8 +39,7 @@
 
         #toplist
         {
-        border-top: 2px solid #8E8E8E;
-        border-bottom: 1px solid #8E8E8E;
+       
         margin: 0px auto 0px auto;
         padding: 12px;
  +      background-color: #ffffff;
@@ -72,7 +71,7 @@
          color: #8E8E8E;
          text-transform: uppercase;
          text-decoration: none;
-         padding: 12px 36px 8px 36px;
+
          }
          a:hover{
          color: #ffffff;
