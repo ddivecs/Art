@@ -57,7 +57,7 @@ else
 
 <script type="text/javascript">
 Shadowbox.init({
-    handleOversize: "drag",
+    handleOversize: "resize",
     modal: true,
     displayNav: false,
     overlayOpacity: 1,
