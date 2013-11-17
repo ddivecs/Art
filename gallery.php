@@ -124,7 +124,11 @@ Shadowbox.init({
                     echo '</div>';
                     
         echo '<div class="homeButton">';
-        echo '<a href="index.html">Return to Index</a>';
+
+        if(isset($_GET["gallery"]) && ($_GET["gallery"]) == "for_review")
+            echo '<a href="volunteers.html">Return to volunteers</a>';
+        else
+            echo '<a href="index.html">Return to Index</a>';
         echo '</div>';
             echo "<script>";
                 echo 'document.write("</div>")'."\n";
