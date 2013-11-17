@@ -74,6 +74,7 @@ Shadowbox.init({
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
+<!--
 <div id="bottom"><h1>Gallery Extravaganza</h1>
     <ul>
         <li><a href="gallery.html">Gallery</a></li>
@@ -83,8 +84,7 @@ Shadowbox.init({
         <li><a href="donate.html">Donate</a></li>
     </ul>
 </div>
-
-
+-->
 <div id="impress">
     <?php
         foreach($gallery_photos as $image)
@@ -116,8 +116,11 @@ Shadowbox.init({
                         echo '</p>';
                     echo '</div>';
                     echo '<div class="donate">';
-                        echo '<a  data-button-style="custom_small" href="https://coinbase.com/checkouts/b6aedbf8095bf93c83405886d7879dbd" target="_blank">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>';
-        echo "</div>";
+                        echo '<a  data-button-style="custom_small" href="https://coinbase.com/checkouts/b6aedbf8095bf93c83405886d7879dbd" target="_blank">Donate Bitcoins to Artist</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>';
+        echo '</div>';
+        echo '<div class="homeButton">';
+        echo '<a href="index.html">Return to Index</a>';
+        echo '</div>';
             echo "<script>";
                 echo 'document.write("</div>")'."\n";
                 echo "slide_pos += image_shift + 900;\n";
