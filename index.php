@@ -67,15 +67,15 @@ Shadowbox.init({
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
-<div id="top"><h1>Gallery Extravaganza</h1>
+ <div id="top"><h1 id="toph1">Gallery Extravaganza</h1>
 
-                <h3>
+                <h3 id="toph3">
                         <ul id="toplist">
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                <li><a href="submit.html">Submit</a></li>
-                                 <li><a href="donate.html">Donate</a></li>
+                                <li><a href="gallery.html" class="toplink">Gallery</a></li>
+                                <li><a href="about.html" class="toplink">About Us</a></li>
+                                <li><a href="contact.html" class="toplink">Contact Us</a></li>
+                                <li><a href="submit.html" class="toplink">Submit</a></li>
+                                 <li><a href="donate.html" class="toplink">Donate</a></li>
 
                         </ul>
                 </h3>
