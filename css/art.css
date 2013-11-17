@@ -755,3 +755,10 @@ a:focus {
     max-width: 100%;
     max-height: 500px;
 }
+
+.description .donate{
+    text-align: right;
+    color: white;
+    text-shadow: 3px 3px black;
+    bottom:100px;
+}

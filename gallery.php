@@ -104,13 +104,13 @@ Shadowbox.init({
             echo "</script>";
                     echo '<div class="description">';
                         echo '<p class = "artist">';
-                            echo 'Darren Divecha';
+                            echo 'Artist';
                         echo '</p>';
                         echo '<p class = "title">';
-                            echo 'Cookies';
+                            echo 'Title';
                         echo '</p>';
                         echo '<p class = "date">';
-                            echo 'today';
+                            echo 'Date';
                         echo '</p>';
                         echo '<p class = "likes">';
                             if (isset($stats_array[$image]))
@@ -118,10 +118,11 @@ Shadowbox.init({
                             else
                                 echo "<a href=\"temp\">0 Likes</a>";
                         echo '</p>';
+                        echo '<div class="donate">';
+                            echo '<a  data-button-style="custom_small" href="https://coinbase.com/checkouts/b6aedbf8095bf93c83405886d7879dbd" target="_blank">Donate Bitcoins to Artist</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>';
+                        echo '</div>';
                     echo '</div>';
-                    echo '<div class="donate">';
-                        echo '<a  data-button-style="custom_small" href="https://coinbase.com/checkouts/b6aedbf8095bf93c83405886d7879dbd" target="_blank">Donate Bitcoins to Artist</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>';
-        echo '</div>';
+                    
         echo '<div class="homeButton">';
         echo '<a href="index.html">Return to Index</a>';
         echo '</div>';
