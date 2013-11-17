@@ -8,7 +8,7 @@ $gallery_videos = glob($photo_dir . "*.mp4");
 
 $stats = NULL;
 if(isset($_GET["gallery"])){
-    $stats = fopen("./photos/".$_GET["gallery"]."/stats.ini","a");
+    $stats = fopen("./photos/".$_GET["gallery"]."/stats.ini","rw");
     $stats_array = array(0);
     while ($line = fgets($stats)) {
       $stats_array[$line] ++;
@@ -79,7 +79,7 @@ Shadowbox.init({
 </div>
 
 <!--
-<div id="bottom"><h1>Gallery Extravaganza</h1>
+<div id="bottom"><h1>The Galleries Online</h1>
     <ul>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="about.html">About Us</a></li>
