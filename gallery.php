@@ -74,7 +74,7 @@ Shadowbox.init({
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
-<div id="top"><h1>Gallery Extravaganza</h1>
+<div id="bottom"><h1>Gallery Extravaganza</h1>
     <ul>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -116,7 +116,7 @@ Shadowbox.init({
                         echo '</p>';
                     echo '</div>';
                     echo '<div class="donate">';
-                        echo '<a class="coinbase-button" data-code="3ab21e758befdae1a05387a8f2c1a9c4" data-button-style="custom_small" href="https://coinbase.com/checkouts/3ab21e758befdae1a05387a8f2c1a9c4">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>';
+                        echo '<a  data-button-style="custom_small" href="https://coinbase.com/checkouts/b6aedbf8095bf93c83405886d7879dbd" target="_blank">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>';
         echo "</div>";
             echo "<script>";
                 echo 'document.write("</div>")'."\n";
