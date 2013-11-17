@@ -8,7 +8,7 @@ $gallery_videos = glob($photo_dir . "*.mp4");
 
 $stats = NULL;
 if(isset($_GET["gallery"])){
-    $stats = fopen("./photos/".$_GET["gallery"]."/stats.ini","rw");
+    $stats = fopen("./photos/".$_GET["gallery"]."/stats.ini","a");
     $stats_array = array(0);
     while ($line = fgets($stats)) {
       $stats_array[$line] ++;
