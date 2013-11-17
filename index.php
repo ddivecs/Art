@@ -33,6 +33,7 @@ $gallery_videos = glob($photo_dir . "*.mp4");
         When creating your own presentation get rid of this file. Start from scratch, it's fun!
         
     -->
+    <link href-"css/css_main.css" rel="stylesheet"/>
     <link href="css/art.css" rel="stylesheet" />
     <script type="text/javascript" src="js/jquery.js"></script>
     <link rel="shortcut icon" href="favicon.png" />
@@ -67,14 +68,18 @@ Shadowbox.init({
 </div>
 
 <div id="top"><h1>Gallery Extravaganza</h1>
-    <ul>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="submit.html">Submit</a></li>
-        <li><a href="donate.html">Donate</a></li>
-    </ul>
-</div>
+
+                <h3>
+                        <ul id="toplist">
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="submit.html">Submit</a></li>
+                                 <li><a href="donate.html">Donate</a></li>
+
+                        </ul>
+                </h3>
+        </div>
 
 
 <div id="impress">
