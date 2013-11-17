@@ -11,7 +11,7 @@ if(isset($_GET["gallery"])){
     $stats = fopen("./photos/".$_GET["gallery"]."/stats.ini","rw");
     $stats_array = array(0);
     while ($line = fgets($stats)) {
-      $stats_array[$line] ++;
+      $stats_array["$line"] ++;
     }
     fclose($stats);
 }
@@ -113,8 +113,8 @@ Shadowbox.init({
                             echo 'Date';
                         echo '</p>';
                         echo '<p class = "likes">';
-                            if (isset($stats_array[$image]))
-                                echo "<a href=\"temp\">$stats_array[$image] Likes</a>";
+                            if (isset($stats_array["$image"]))
+                                echo "<a href=\"temp\">".$stats_array[$image]." Likes</a>";
                             else
                                 echo "<a href=\"temp\">0 Likes</a>";
                         echo '</p>';
