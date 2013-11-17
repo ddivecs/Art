@@ -30,11 +30,13 @@ if ((($_FILES["file"]["type"] == "image/gif")
       move_uploaded_file($_FILES["file"]["tmp_name"],
       "photos/for_review/" . $_FILES["file"]["name"]);
       echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+      header("Location: submitSuccess.html");
       }
     }
   }
 else
   {
   echo "Invalid file";
+  header("Location: submitFail.html");
   }
 ?>
