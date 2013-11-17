@@ -85,13 +85,13 @@ body {
     font-family: 'PT Sans', sans-serif;
     min-height: 740px;
 
-    background: rgb(0, 0, 0);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(190, 190, 190)), to(rgb(0, 0, 0)));
-    background: -webkit-radial-gradient(rgb(190, 190, 190), rgb(0, 0, 0));
-    background:    -moz-radial-gradient(rgb(190, 190, 190), rgb(0, 0, 0));
-    background:     -ms-radial-gradient(rgb(190, 190, 190), rgb(0, 0, 0));
-    background:      -o-radial-gradient(rgb(190, 190, 190), rgb(0, 0, 0));
-    background:         radial-gradient(rgb(190, 190, 190), rgb(0, 0, 0));
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
 }
 
 /*
@@ -164,7 +164,6 @@ a:focus {
 */
 
 .step {
-    text-align: center;
     position: relative;
     width: 900px;
     padding: 40px;
@@ -214,7 +213,7 @@ a:focus {
     height: 700px;
     padding: 40px 60px;
 
-    background-color: rgb(191,191,191);
+    background-color: white;
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
@@ -702,56 +701,3 @@ a:focus {
     Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
     for you.
 */
-
-
-.step img{
-    max-width: 90%;
-    max-height: 90%;
-    height: 90%;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-}
-.step .description{
-    color: white;
-
-    background: rgb(0, 0, 0);
-    background: -webkit-gradient(linear, 50% 50%, 0, 50% 50%, 500, from(rgba(190, 190, 190,.1)), to(rgb(0, 0, 0,1)));
-    background: -webkit-linear-gradient(rgba(190, 190, 190,.1), rgba(0, 0, 0,1));
-    background:    -moz-linear-gradient(rgba(190, 190, 190,.1), rgba(0, 0, 0,1));
-    background:     -ms-linear-gradient(rgba(190, 190, 190,.1), rgba(0, 0, 0,1));
-    background:      -o-linear-gradient(rgba(190, 190, 190,.1), rgba(0, 0, 0,1));
-    background:         linear-gradient(rgba(190, 190, 190,.1), rgba(0, 0, 0,1));
-
-    text-shadow: 3px 3px black;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 100px;
-    width: 700px;
-    position: absolute;
-    bottom:100px;
-    text-align: left;
-    opacity: .01;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-}
-.step .description:hover{
-    opacity: .80;
-    -webkit-transition: opacity 2s ease-in;
-    -moz-transition: opacity 2s ease-in;
-    -o-transition: opacity 2s ease-in;
-    -ms-transition: opacity 2s ease-in;
-    transition: opacity 2s ease-in;
-}
-
-.step a{
-    background: rgba(0,0,0,0);
-    max-width: 100%;
-    max-height: 500px;
-    max-width: 100%;
-    max-height: 500px;
-}

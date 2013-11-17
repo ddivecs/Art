@@ -5,6 +5,14 @@ if(isset($_GET["gallery"]))
     $photo_dir = "./photos/".($_GET["gallery"])."/";
 $gallery_photos = glob($photo_dir . "*.jpg");
 $gallery_videos = glob($photo_dir . "*.mp4");
+
+$stats = fopen("./photos/".$_GET["gallery"]."/stats.ini","rw");
+$stats_array = array(0);
+while ($line = fgets($stats)) {
+  $stats_array[$line] ++;
+}
+fclose($stats)
+
 ?>
 <html lang="en">
 <head>
@@ -33,7 +41,6 @@ $gallery_videos = glob($photo_dir . "*.mp4");
         When creating your own presentation get rid of this file. Start from scratch, it's fun!
         
     -->
-    <link href-"css/css_main.css" rel="stylesheet"/>
     <link href="css/art.css" rel="stylesheet" />
     <script type="text/javascript" src="js/jquery.js"></script>
     <link rel="shortcut icon" href="favicon.png" />
@@ -67,19 +74,15 @@ Shadowbox.init({
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
- <div id="top"><h1 id="toph1">Gallery Extravaganza</h1>
-
-                <h3 id="toph3">
-                        <ul id="toplist">
-                                <li><a href="gallery.html" class="toplink">Gallery</a></li>
-                                <li><a href="about.html" class="toplink">About Us</a></li>
-                                <li><a href="contact.html" class="toplink">Contact Us</a></li>
-                                <li><a href="submit.html" class="toplink">Submit</a></li>
-                                 <li><a href="donate.html" class="toplink">Donate</a></li>
-
-                        </ul>
-                </h3>
-        </div>
+<div id="top"><h1>Gallery Extravaganza</h1>
+    <ul>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="submit.html">Submit</a></li>
+        <li><a href="donate.html">Donate</a></li>
+    </ul>
+</div>
 
 
 <div id="impress">
@@ -105,6 +108,12 @@ Shadowbox.init({
                         echo '<p class = "date">';
                             echo 'today';
                         echo '</p>';
+                        echo '<p class = "likes">';
+                            if (isset($stats_array[$image]))
+                                echo "<a href=\"temp\">$stats_array[$image] Likes</a>";
+                            else
+                                echo "<a href=\"temp\">0 Likes</a>";
+                        echo '</p>';
                     echo '</div>';
             echo "<script>";
                 echo 'document.write("</div>")'."\n";
@@ -117,7 +126,7 @@ Shadowbox.init({
             echo "<script>";
                 echo 'document.write("<div id=\"p"+image_number+"\" class=\"step slide\" data-x= \"" + slide_pos + "\" data-y=\"0\">")'."\n";
                 //echo 'document.writer("")'."\n";
-                echo 'document.write("<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/azgTUSWVj5M\" frameborder=\"0\" allowfullscreen></iframe>")'."\n";
+                echo 'document.write("<iframe width=\"90%\" height=\"90%\" src=\"//www.youtube.com/embed/azgTUSWVj5M\" frameborder=\"0\" allowfullscreen></iframe>")'."\n";
                 //echo 'dcoument.write("</a>")'."\n";
             echo "</script>";
             echo "<script>";
